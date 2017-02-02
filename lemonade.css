@@ -1,0 +1,53 @@
+.cstm-area {
+	float: left;
+    padding: 0.6rem;
+    position: fixed;
+    margin: 3rem 2rem;
+    width: 24rem;
+}
+
+.cstm-area-hide {
+    left: -21rem;
+    transition: left .5s ease-in;
+}
+
+.cstm-wrap {
+    display: inline-block;
+    width: 20rem;
+    padding: 1rem;
+}
+
+.cstm-area-title {
+	
+}
+
+.cstm-area-memobox{
+	resize: none;
+}
+
+.cstm-handle {
+    display: inline-block;
+    width: 2.6rem;
+    vertical-align: top;
+    border: 1px solid;
+}
+
+
+
+.slide-in {
+    animation: slide-in 0.5s forwards;
+}
+
+.slide-out {
+    animation: slide-out 0.5s forwards;
+}
+    
+@keyframes slide-in {
+    100% { transform: translateX(0%); }
+}
+
+    
+@keyframes slide-out {
+    0% { transform: translateX(0%); }
+    100% { transform: translateX(-100%); }
+}
