@@ -5,22 +5,37 @@
     if(navigator.platform) {
 		if(!(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent))) {
             $('head').append('<link href="https://rawgit.com/Katheor/Lemonade/demonade/lemonade.css" rel="stylesheet">');
-			createMemo();   //  create Element
-            memoKeyup();
+			initHtml();   //  create Element
+            eventSet();
 		}
 	}
     
 
-	function createMemo() {
-
+	function initHtml() {
 		var htmlTxt =`
             <div class="cstm-area slide-in">
                 <div class="cstm-wrap">
-                    <h5 class="cstm-title">메모장</h5>
-                    <textarea id="cstm-area-memobox" rows="6"></textarea>
+                    <div class="cstm-content">
+                        <h5 class="cstm-title">메모장</h5>
+                        <textarea id="cstm-memobox" rows="6"></textarea>
+                    </div>
+                    <div class="cstm-menu">
+                        <div class="cstm-menu-item">
+                            <i class="fa fa-clipboard" aria-hidden="true"></i>
+                            <span>memo</span>
+                        </div>
+                        <div class="cstm-menu-item">
+                            <i class="fa fa-refresh" aria-hidden="true"></i>
+                            <span>recent</span>
+                        </div>
+                        <div class="cstm-menu-item">
+                            <i class="fa fa-info-circle" aria-hidden="true"></i>
+                            <span>notice</span>
+                        </div>
+                    </div>
                 </div>
                 <div class="cstm-handle">
-                    <span>open</span>
+                    <i class="fa fa-chevron-right" aria-hidden="true"></i>
                 </div>
             </div>
             `;
@@ -29,9 +44,14 @@
         if (sessionStorage["memo"]) $("#cstm-area-memoBox").val() = sessionStorage["memo"];
 	}
 
-    function memoKeyup() {
+    function eventSet() {
         $('#cstm-area-memobox').on('keyup', function() {
             sessionStorage["memo"] = this.value;
+        });
+
+        $('.cstm-handle').click(function() {
+            $('.cstm-area').toggleClass('slide-in');
+            $('.cstm-area').toggleClass('slide-out');
         });
     }
 	

@@ -1,33 +1,40 @@
 .cstm-area {
-	float: left;
     padding: 0.6rem;
     position: fixed;
     margin: 3rem 2rem;
     width: 24rem;
 }
 
-.cstm-area-hide {
-    left: -21rem;
-    transition: left .5s ease-in;
-}
-
 .cstm-wrap {
+	float: left;
     display: inline-block;
-    width: 20rem;
+    width: 19rem;
     padding: 1rem;
 }
 
-.cstm-area-title {
-	
+.cstm-title {
+	padding-top: 0;
 }
 
-.cstm-area-memobox{
+#cstm-memobox{
 	resize: none;
+}
+
+.cstm-menu {
+    margin: 10px 0;
+    list-style: none;
+    margin-bottom: 0;
+}
+
+.cstm-menu-item {
+    display: inline-block;
+    width: 32%;
+    text-align: center;
 }
 
 .cstm-handle {
     display: inline-block;
-    width: 2.6rem;
+    width: 1.6rem;
     vertical-align: top;
     border: 1px solid;
 }
@@ -43,11 +50,12 @@
 }
     
 @keyframes slide-in {
+    0% { transform: translateX(-90%); }
     100% { transform: translateX(0%); }
 }
 
     
 @keyframes slide-out {
     0% { transform: translateX(0%); }
-    100% { transform: translateX(-100%); }
+    100% { transform: translateX(-90%); }
 }
