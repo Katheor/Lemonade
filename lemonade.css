@@ -3,13 +3,16 @@
     position: fixed;
     margin: 3rem 2rem;
     width: 24rem;
+    z-index: 100;
 }
 
 .cstm-wrap {
 	float: left;
     display: inline-block;
+    background-color: #aca6e4;
     width: 19rem;
     padding: 1rem;
+    box-shadow: -1px 1px 4px 1px rgba(0, 0, 0, 0.6);
 }
 
 .cstm-title {
@@ -18,12 +21,15 @@
 
 #cstm-memobox{
 	resize: none;
+    border: 0;
 }
 
 .cstm-menu {
     margin: 10px 0;
     list-style: none;
     margin-bottom: 0;
+    cursor: default;
+    user-select: none;
 }
 
 .cstm-menu-item {
@@ -32,20 +38,50 @@
     text-align: center;
 }
 
+.cstm-menu-item #cstm-item-memo:hover {
+    box-shadow: 1px 1px 2px;
+    transition: box-shadow .5s;
+}
+.cstm-menu-item #cstm-item-recent {
+    color: gray;
+}
+.cstm-menu-item #cstm-item-notice {
+    box-shadow: 1px 1px 2px;
+    transition: box-shadow .5s;
+    cursor: pointer;
+}
+
 .cstm-handle {
     display: inline-block;
     width: 1.6rem;
     vertical-align: top;
-    border: 1px solid;
+    text-align: center;
 }
 
 
 
-.slide-in {
+.cstm-handle.slide-in {
+    animation: rotateToRight 0.5s forwards;
+}
+.cstm-handle.slide-out {
+    animation: rotateToLeft 0.5s forwards;
+}
+
+@keyframes rotateToRight {
+    0% { transform: rotate(180deg); }
+    100% { transform: rotate(0); }
+}
+
+@keyframes rotateToLeft {
+    0% { transform: rotate(0); }
+    100% { transform: rotate(180deg); }
+}
+
+.cstm-area.slide-in {
     animation: slide-in 0.5s forwards;
 }
 
-.slide-out {
+.cstm-area.slide-out {
     animation: slide-out 0.5s forwards;
 }
     

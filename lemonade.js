@@ -20,21 +20,21 @@
                         <textarea id="cstm-memobox" rows="6"></textarea>
                     </div>
                     <div class="cstm-menu">
-                        <div class="cstm-menu-item">
+                        <div class="cstm-menu-item" id="cstm-item-memo">
                             <i class="fa fa-clipboard" aria-hidden="true"></i>
                             <span>memo</span>
                         </div>
-                        <div class="cstm-menu-item">
+                        <div class="cstm-menu-item" id="cstm-item-recent">
                             <i class="fa fa-refresh" aria-hidden="true"></i>
                             <span>recent</span>
                         </div>
-                        <div class="cstm-menu-item">
+                        <div class="cstm-menu-item" id="cstm-item-notice">
                             <i class="fa fa-info-circle" aria-hidden="true"></i>
                             <span>notice</span>
                         </div>
                     </div>
                 </div>
-                <div class="cstm-handle">
+                <div class="cstm-handle slide-in">
                     <i class="fa fa-chevron-right" aria-hidden="true"></i>
                 </div>
             </div>
@@ -45,13 +45,25 @@
 	}
 
     function eventSet() {
-        $('#cstm-area-memobox').on('keyup', function() {
+        // 메모장 내용 sessionStorage에 보존
+        $('#cstm-memobox').on('keyup', function() {
             sessionStorage["memo"] = this.value;
         });
 
+        // 로그아웃 시에 sessionStorage 내용 폐기
+        $('li.pt-logout a').click(function () { delete sessionStorage["memo"] });
+
+        // addOn slide in-out
         $('.cstm-handle').click(function() {
             $('.cstm-area').toggleClass('slide-in');
             $('.cstm-area').toggleClass('slide-out');
+            $('.cstm-handle').toggleClass('slide-in');
+            $('.cstm-handle').toggleClass('slide-out');
+        });
+
+        // notice page link
+        $('#cstm-item-notice').click(function() {
+            window.open('https://github.com/Katheor/Lemonade');
         });
     }
 	
