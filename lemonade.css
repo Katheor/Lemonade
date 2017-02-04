@@ -18,6 +18,7 @@
 .cstm-title {
 	padding-top: 0;
     user-select: none;
+    cursor: default;
 }
 
 #cstm-memobox{
@@ -47,9 +48,11 @@
     color: gray;
 }
 .cstm-menu-item#cstm-item-notice {
+    cursor: pointer;
+}
+.cstm-menu-item#cstm-item-notice:hover {
     box-shadow: 1px 1px 2px;
     transition: box-shadow .5s;
-    cursor: pointer;
 }
 
 .cstm-handle {
