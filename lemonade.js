@@ -4,7 +4,7 @@
     // Mobile Check
     if(navigator.platform) {
 		if(!(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent))) {
-            $('head').append('<link href="https://rawgit.com/Katheor/Lemonade/demonade/lemonade.css" rel="stylesheet">');
+            $('head').append('<link href="https://rawgit.com/Katheor/Lemonade/lemonade/lemonade.css" rel="stylesheet">');
 			initHtml();   //  create Element
             eventSet();
 		}
