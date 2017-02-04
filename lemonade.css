@@ -17,6 +17,7 @@
 
 .cstm-title {
 	padding-top: 0;
+    user-select: none;
 }
 
 #cstm-memobox{
@@ -38,14 +39,14 @@
     text-align: center;
 }
 
-.cstm-menu-item #cstm-item-memo:hover {
+.cstm-menu-item#cstm-item-memo:hover {
     box-shadow: 1px 1px 2px;
     transition: box-shadow .5s;
 }
-.cstm-menu-item #cstm-item-recent {
+.cstm-menu-item#cstm-item-recent {
     color: gray;
 }
-.cstm-menu-item #cstm-item-notice {
+.cstm-menu-item#cstm-item-notice {
     box-shadow: 1px 1px 2px;
     transition: box-shadow .5s;
     cursor: pointer;
@@ -61,10 +62,10 @@
 
 
 .cstm-handle.slide-in {
-    animation: rotateToRight 0.5s forwards;
+    animation: rotateToRight 0.3s forwards;
 }
 .cstm-handle.slide-out {
-    animation: rotateToLeft 0.5s forwards;
+    animation: rotateToLeft 0.3s forwards;
 }
 
 @keyframes rotateToRight {
