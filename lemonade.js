@@ -41,7 +41,7 @@
             `;
 		
         $('#mw-wrapper').prepend(htmlTxt);
-        if (sessionStorage["memo"]) $("#cstm-memobox").val() = sessionStorage["memo"];
+        if (sessionStorage["memo"]) $("#cstm-memobox").val(sessionStorage["memo"]);
 	}
 
     function eventSet() {
