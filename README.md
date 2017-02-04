@@ -15,7 +15,7 @@ https://femiwiki.com/w/사용자:Katheor/femiwiki.js 에서 코드를 복사해�
 
 
 #### 없겠지만 혹시 모를 기여자분에게
-제가 git사용이 서툴러서 갑자기 들어온 commit에 놀랄지도 모릅니다 --당황해서 github로그인을 한 다음 settings 페이지로 이동을 해서 Delete this repository를 누르고 저장소 이름을 타이핑해 넣어서 저장소를 날릴수도 있습니다.--
+제가 git사용이 서툴러서 갑자기 들어온 commit에 놀랄지도 모릅니다 ~~당황해서 github로그인을 한 다음 settings 페이지로 이동을 해서 Delete this repository를 누르고 저장소 이름을 타이핑해 넣어서 저장소를 날릴수도 있습니다.~~
 그냥 메일 한번 넣어주세요.
 
 #### License
