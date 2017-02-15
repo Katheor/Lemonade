@@ -4,7 +4,7 @@
     // Mobile Check
     if(navigator.platform) {
 		if(!(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent))) {
-            $('head').append('<link href="https://rawgit.com/Katheor/Lemonade/demonade/lemonade.css" rel="stylesheet">');
+            $('head').append('<link href="https://rawgit.com/Katheor/Lemonade/lemonade/lemonade.css" rel="stylesheet">');
 			initHtml();   //  create Element
             eventSet();
 		}
@@ -13,7 +13,7 @@
 
 	function initHtml() {
 		var htmlTxt =`
-            <div class="cstm-area slide-in">
+            <div class="cstm-area slide-in" style="display:none;">
                 <div class="cstm-wrap">
                     <div class="cstm-content">
                         <h5 class="cstm-title">메모장</h5>
@@ -35,13 +35,14 @@
                     </div>
                 </div>
                 <div class="cstm-handle slide-in">
-                    <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                    <i class="fa fa-chevron-left" aria-hidden="true"></i>
                 </div>
             </div>
             `;
 		
         $('#mw-wrapper').prepend(htmlTxt);
         if (sessionStorage["memo"]) $("#cstm-memobox").val(sessionStorage["memo"]);
+        $('.cstm-area').css('display', '');
 	}
 
     function eventSet() {
