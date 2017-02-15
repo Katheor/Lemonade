@@ -42,7 +42,6 @@
 		
         $('#mw-wrapper').prepend(htmlTxt);
         if (sessionStorage["memo"]) $("#cstm-memobox").val(sessionStorage["memo"]);
-        // $('.cstm-area').css('display', '');
 	}
 
     function eventSet() {
@@ -69,3 +68,7 @@
     }
 	
 })()
+
+$(document).ready(function() {
+    $('.cstm-area').css('display', '');
+});
