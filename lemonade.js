@@ -13,7 +13,7 @@
 
 	function initHtml() {
 		var htmlTxt =`
-            <div class="cstm-area slide-in">
+            <div class="cstm-area slide-in" style="display:none;">
                 <div class="cstm-wrap">
                     <div class="cstm-content">
                         <h5 class="cstm-title">메모장</h5>
@@ -35,7 +35,7 @@
                     </div>
                 </div>
                 <div class="cstm-handle slide-in">
-                    <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                    <i class="fa fa-chevron-left" aria-hidden="true"></i>
                 </div>
             </div>
             `;
@@ -68,3 +68,7 @@
     }
 	
 })()
+
+$(document).ready(function() {
+    $('.cstm-area').css('display', '');
+});
